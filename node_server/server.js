@@ -27,5 +27,5 @@ app.get('/', (req, res) => {
 
 app.listen(PORT, HOST);
 
-console.log(`Kontener uruchomiony na porcie ${PORT}`);
+console.log(`Kontener uruchomiony na porcie ${PORT} w dniu ${new Date().toLocaleString('pl-PL')}`);
 console.log(`Autorem jest ${AUTHOR}`);

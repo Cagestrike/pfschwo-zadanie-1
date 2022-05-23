@@ -28,9 +28,9 @@ Należy teraz użyć kilku pierwszych cyfr id i użyć polecenia:
 
 `docker logs 80c5`
 
-W wyniku tego polecenia zostanie wyświetlona wiadomość wygenerowania podczas uruchamiania serwera:
+W wyniku tego polecenia zostanie wyświetlona wiadomość wygenerowana podczas uruchamiania serwera:
 ```
-Kontener uruchomiony na porcie 3333
+Kontener uruchomiony na porcie 3333 w dniu 5/23/2022, 1:02:05 PM
 Autorem jest Damian Ciechan
 ```
 Efekt działania pod adresem localhost:3333:
@@ -59,7 +59,7 @@ Będąc w folderze głównym repozytorium:
 
 W logach zostanie automatycznie wyświetlona wiadomość o uruchomieniu serwera:
 ```
-nodeserver_1  | Kontener uruchomiony na porcie 3333
+nodeserver_1  | Kontener uruchomiony na porcie 3333 w dniu 5/23/2022, 1:02:05 PM
 nodeserver_1  | Autorem jest Damian Ciechan
 ```
 Efekt działania pod adresem localhost jest taki sam, tzn:
