@@ -1,0 +1,13 @@
+{
+    "name": "pfschwo_zadanie_1",
+    "version": "1.0.0",
+    "description": "Zadanie nr 1 POLLUB",
+    "author": "Damian Ciechan <damian.ciechan@pollub.edu.pl>",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server.js"
+    },
+    "dependencies": {
+      "express": "^4.16.1"
+    }
+  }
