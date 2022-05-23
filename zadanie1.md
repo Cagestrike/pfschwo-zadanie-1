@@ -24,6 +24,8 @@ W wyniku tego polecenia zostanie wyświetlona wiadomość wygenerowania podczas 
 Kontener uruchomiony na porcie 3333
 Autorem jest Damian Ciechan
 ```
+Efekt działania pod adresem localhost:3333:
+![text](./localhost_web.png)
 Ile warstw posiada obraz możemy sprawdzić poleceniem:
 `docker history damianciechan/pfschwo_zadanie_1`
 ```
@@ -47,7 +49,7 @@ nodeserver_1  | Kontener uruchomiony na porcie 3333
 nodeserver_1  | Autorem jest Damian Ciechan
 ```
 Efekt działania pod adresem localhost jest taki sam, tzn:
-![text](./localhost_web.png)
+![text](./localhost.png)
 ## Punkt 4.
 Zbudowanie obrazów oraz dodanie do repozytorium na DockerHub odbywa się poleceniem:
 `docker buildx build -t damianciechan/pfschwo_zadanie_1 --platform linux/arm/v7,linux/arm64/v8,linux/amd64 --push .`
