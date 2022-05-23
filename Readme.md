@@ -13,21 +13,32 @@ Użycie flagi --network=host również nie pomogło, gdyż funkcjonalność ta n
 ## Punkt 3.
 ### Sposób 1
 Aby zbudować obraz należy użyć polecenia: (będąc w folderze node_server)
+
 `docker build . -t damianciechan/pfschwo_zadanie_1`
+
 Następnie uruchomić kontener:
+
 `docker run -p 3333:3333 -d --name node_server damianciechan/pfschwo_zadanie_1`
+
 W konsoli wyświetlona zostanie wartość ID kontenera, np:
+
 `80c5b5b8fd7be22959b70e664f3c7c03b56a20774094781c25ec6e6b27fd251d`.
+
 Należy teraz użyć kilku pierwszych cyfr id i użyć polecenia:
+
 `docker logs 80c5`
+
 W wyniku tego polecenia zostanie wyświetlona wiadomość wygenerowania podczas uruchamiania serwera:
 ```
 Kontener uruchomiony na porcie 3333
 Autorem jest Damian Ciechan
 ```
 Efekt działania pod adresem localhost:3333:
+
 ![text](./localhost_web.png)
+
 Ile warstw posiada obraz możemy sprawdzić poleceniem:
+
 `docker history damianciechan/pfschwo_zadanie_1`
 ```
 IMAGE          CREATED         CREATED BY                                      SIZE      COMMENT
@@ -43,18 +54,24 @@ IMAGE          CREATED         CREATED BY                                      S
 ```
 ### Sposób 2
 Będąc w folderze głównym repozytorium:
+
 `docker-compose up --build`
+
 W logach zostanie automatycznie wyświetlona wiadomość o uruchomieniu serwera:
 ```
 nodeserver_1  | Kontener uruchomiony na porcie 3333
 nodeserver_1  | Autorem jest Damian Ciechan
 ```
 Efekt działania pod adresem localhost jest taki sam, tzn:
+
 ![text](./localhost.png)
 ## Punkt 4.
 Zbudowanie obrazów oraz dodanie do repozytorium na DockerHub odbywa się poleceniem:
+
 `docker buildx build -t damianciechan/pfschwo_zadanie_1 --platform linux/arm/v7,linux/arm64/v8,linux/amd64 --push .`
+
 Efekt działania:
+
 `docker buildx imagetools inspect damianciechan/pfschwo_zadanie_1`
 ```
 Name:      docker.io/damianciechan/pfschwo_zadanie_1:latest
