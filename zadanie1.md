@@ -39,7 +39,15 @@ IMAGE          CREATED         CREATED BY                                      S
 <missing>      23 hours ago    ADD alpine-minirootfs-3.15.4-aarch64.tar.gz …   5.32MB    buildkit.dockerfile.v0
 ```
 ### Sposób 2
-Będąc w folderze głównym repozytorium
+Będąc w folderze głównym repozytorium:
+`docker-compose up --build`
+W logach zostanie automatycznie wyświetlona wiadomość o uruchomieniu serwera:
+```
+nodeserver_1  | Kontener uruchomiony na porcie 3333
+nodeserver_1  | Autorem jest Damian Ciechan
+```
+Efekt działania pod adresem localhost jest taki sam, tzn:
+![text](./localhost_web.png)
 ## Punkt 4.
 Zbudowanie obrazów oraz dodanie do repozytorium na DockerHub odbywa się poleceniem:
 `docker buildx build -t damianciechan/pfschwo_zadanie_1 --platform linux/arm/v7,linux/arm64/v8,linux/amd64 --push .`
