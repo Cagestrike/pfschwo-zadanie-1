@@ -7,6 +7,7 @@ Linie 32,33 pozostawiają w logach informacje kto jest autorem serwera oraz na j
 
 ## Punkt 2.
 Punkt 2 został zrealizowany na dwa sposoby - uruchomienie aplikacji bezpośrednio w kontenerze i zmapowanie portów (node_server/Dockerfile) lub wykorzystanie proxy nginx i skorzystanie z docker-compose. Powodem było przetestowanie, czy wewnątrz kontenera można odczytać prawdziwy adres IP klienta. W obu przypadkach się nie udało - aplikacja jest testowana lokalnie na 'localhoscie' a pokazywany czas to czas systemowy.
+Użycie flagi --network=host również nie pomogło, gdyż funkcjonalność ta nie jest wspierana w Docker Desktop for Windows [Link do dokumentacji](https://docs.docker.com/network/host/)
 
 
 ## Punkt 3.
